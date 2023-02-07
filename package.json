@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
+    "start": "node dist/server.js",
+    "postinstall": "tsc && copyfiles -u 1 src/**/*.mustache dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon -e ts,json,mustache src/server.ts"
   },
@@ -18,6 +23,7 @@
   },
   "homepage": "https://github.com/eckstein75/nodets-canil#readme",
   "dependencies": {
+    "copyfiles": "^2.4.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mustache-express": "^1.3.2"
