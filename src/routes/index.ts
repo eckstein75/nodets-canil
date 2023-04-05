@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router } from 'express';
 import * as PagesController from '../controllers/pageController';
 import * as SearchController from '../controllers/searchController';
 
